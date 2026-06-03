@@ -1,0 +1,234 @@
+/* ==========================================================================
+   1. Universal & Base Reset Rules
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #222;
+    background: linear-gradient(to right, #f8fbff, #e6f0ff);
+    padding-top: 70px; /* Accounts for fixed header path layout spacing */
+}
+
+/* ==========================================================================
+   2. Typography Components
+   ========================================================================== */
+h2 {
+    font-size: 28px;
+    font-style: italic;
+    font-weight: bold;
+    background: linear-gradient(to right, #007BFF, #00C6FF);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin: 25px 0 15px 0;
+    position: sticky;
+    top: 60px;
+    z-index: 10;
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    text-align: center;
+}
+
+/* ==========================================================================
+   3. Header Navigation Properties
+   ========================================================================== */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.navLink {
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    border: 1px solid #666;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.navLink:hover {
+    background-color: royalblue;
+    color: white;
+}
+
+#mainHeader {
+    text-align: center;
+    padding: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    outline: 3px dashed orange;
+    margin-bottom: 25px;
+    color: darkblue;
+    background-color: lightyellow;
+}
+
+#welcomeBanner {
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   4. Custom Module Layout Elements
+   ========================================================================== */
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.eventCard {
+    background-color: #ffffff;
+    border: 2px solid #333;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    min-height: 150px;
+    position: relative;
+}
+
+.event-description {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.cta-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.highlight {
+    background-color: yellow !important;
+    color: black !important;
+    font-weight: bold;
+    padding: 3px;
+}
+
+/* Interactive Badge styling system logic */
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: crimson;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+.event-img {
+    border: 3px solid black;
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    transition: width 0.2s ease;
+}
+
+form, #feedback-section, #preferences, #geolocation, #promo {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.hiddenText {
+    visibility: hidden;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background: #333;
+    color: white;
+}
+
+/* ==========================================================================
+   5. Responsive Viewport Configurations
+   ========================================================================== */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    body {
+        padding-top: 180px; /* Accounts for dynamic expanded stacked navbar */
+    }
+
+    h2 {
+        font-size: 24px;
+        top: 170px;
+    }
+
+    #mainHeader {
+        font-size: 24px;
+    }
+
+    .eventCard, form, #feedback-section, #preferences, #geolocation, #promo {
+        width: 95%;
+    }
+
+    .navLink {
+        width: 80%;
+        margin: 2px 0;
+    }
+}
